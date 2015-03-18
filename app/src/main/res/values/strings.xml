@@ -8,4 +8,7 @@
     <string name="title_activity_splash">Splash</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_play_normal">PlayNormal</string>
+    <string name="title_activity_about_us">AboutUs</string>
+    <string name="title_activity_scores">Scores</string>
+    <string name="title_activity_how_to_play">HowToPlay</string>
 </resources>

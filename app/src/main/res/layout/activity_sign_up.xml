@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/idRelativeLayout"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:gravity="center"
+    android:layout_height="match_parent"
     android:background="@drawable/qblue1"
-    >
+    android:gravity="center">
 
     <LinearLayout
         android:id="@+id/idLinearLayout"
@@ -20,74 +19,73 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_weight="1"
-            android:background="@drawable/qlogo"
-            />
+            android:background="@drawable/qlogo" />
 
         <EditText
             android:id="@+id/userNameEditText"
+            style="@style/editText_style"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
             android:layout_weight="1"
             android:hint="username"
-            android:inputType="textPersonName"
-            android:textColorHint="#ffffff"
 
-            android:layout_marginTop="50dp"
-            style="@style/editText_style"
-            />
+            android:inputType="textPersonName"
+            android:textColorHint="#ffffff" />
 
         <EditText
             android:id="@+id/passWordEditText"
+            style="@style/editText_style"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:hint="password"
-            android:inputType="textPassword"
-            android:textColorHint="#ffffff"
 
-            android:layout_marginTop="10dp"
-            style="@style/editText_style"
-            />
+            android:inputType="textPassword"
+            android:textColorHint="#ffffff" />
 
         <EditText
             android:id="@+id/emailEditText"
+            style="@style/editText_style"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:hint="email@email.com"
-            android:inputType="textEmailAddress"
-            android:textColorHint="#ffffff"
 
-            android:layout_marginTop="10dp"
-            style="@style/editText_style"
-            />
+            android:inputType="textEmailAddress"
+            android:textColorHint="#ffffff" />
 
         <Button
             android:id="@+id/signUpButton"
+            style="@style/button_style"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
             android:layout_weight="1"
-            android:text="Sign Up"
-            android:background="#34A03D"
 
             android:onClick="SignUpButton"
-            android:layout_marginTop="25dp"
-            style="@style/button_style"
+            android:text="Sign Up"
             />
 
         <Button
             android:id="@+id/LoginButton"
+            style="@style/button_style"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Login"
-            android:background="#34A03D"
-            android:onClick="showLoginActivity"
             android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:onClick="showLoginActivity"
 
-            style="@style/button_style"
+            android:text="Login"
             />
 
+
+        <!--
+            android:background="#34A03D"
+-->
     </LinearLayout>
+
 
 </RelativeLayout>

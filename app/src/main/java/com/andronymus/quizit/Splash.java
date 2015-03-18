@@ -18,7 +18,7 @@ import static android.view.Window.FEATURE_NO_TITLE;
 
 public class Splash extends ActionBarActivity {
     //duration of the splash screen
-    private static final long SPLASH_SCREEN = 3000;
+    private static final long SPLASH_SCREEN = 5000;
     private ProgressBar progressBar;
 
     @Override

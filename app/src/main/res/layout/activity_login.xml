@@ -56,7 +56,6 @@
             android:layout_weight="1"
             android:text="Login"
             android:textColor="#ffffff"
-            android:background="#34A03D"
 
             android:onClick="LoginIntoParse"
             android:layout_marginTop="25dp"
@@ -65,20 +64,23 @@
             />
 
         <Button
+
             android:id="@+id/signUpButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Sign Up"
             android:textColor="#ffffff"
-            android:background="#34A03D"
 
             android:onClick="ShowSignUpActivity"
             android:layout_marginTop="10dp"
             style="@style/button_style"
-
-
             />
+
+        <!--
+                    android:background="#34A03D"
+
+        -->
 
     </LinearLayout>
 

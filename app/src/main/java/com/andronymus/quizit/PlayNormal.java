@@ -1,4 +1,5 @@
 package com.andronymus.quizit;
+
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -6,13 +7,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 
 public class PlayNormal extends ActionBarActivity {
+
+    public static final int INCREMENT_SCORE = 100;
+    public static final int DECREMENT_SCORE = 50;
+    public static final int NUMBER_QUESTIONS = 10;
     // TODO: Controlar que al girar la pantalla no se cambien las preguntas
-    private EditText editTextQuestion;
+    private TextView textViewQuestion;
+    private TextView gameOver;
     private Button buttonAnswer1;
     private Button buttonAnswer2;
     private Button buttonAnswer3;
@@ -22,6 +29,9 @@ public class PlayNormal extends ActionBarActivity {
     private boolean isTrue = false;
     private ArrayList<Answer> answers;
     private ArrayList<Button> buttons;
+    private int count = 1;
+    private int score = 0;
+    Sonidos sonidos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +40,19 @@ public class PlayNormal extends ActionBarActivity {
 
         databaseManager = new DatabaseManager(this);
 
-        editTextQuestion = (EditText) findViewById(R.id.editTextQuestion);
+        textViewQuestion = (TextView) findViewById(R.id.textViewQuestion);
         buttonAnswer1 = (Button) findViewById(R.id.buttonAnswer1);
         buttonAnswer2 = (Button) findViewById(R.id.buttonAnswer2);
         buttonAnswer3 = (Button) findViewById(R.id.buttonAnswer3);
         buttonAnswer4 = (Button) findViewById(R.id.buttonAnswer4);
+        gameOver = (TextView) findViewById(R.id.gameOver);
 
         buttons = new ArrayList<Button>();
         buttons.add(buttonAnswer1);
         buttons.add(buttonAnswer2);
         buttons.add(buttonAnswer3);
         buttons.add(buttonAnswer4);
-
+sonidos = new Sonidos();
         loadQuestion();
     }
 
@@ -63,7 +74,7 @@ public class PlayNormal extends ActionBarActivity {
 
         question = databaseManager.getQuestion(theNumber);
         String questionText = question.getQuestionText();
-        editTextQuestion.setText(questionText);
+        textViewQuestion.setText(questionText);
 
 
         answers = databaseManager.getAnswer(theNumber);
@@ -72,7 +83,7 @@ public class PlayNormal extends ActionBarActivity {
         for (Answer answer : answers) {
 
             buttons.get(i++).setText(answer.getAnswerText());
-            System.out.println(answers.size());
+            //System.out.println(answers.size());
             // isTrue = answer.getIsTrue();
 
             if (answers.size() == 2) {
@@ -89,6 +100,7 @@ public class PlayNormal extends ActionBarActivity {
 
 
     public void onClickAnyAnswer(View view) {
+sonidos.sonidoClick(this);
         if (buttonAnswer1 == findViewById(view.getId())) {
             isTrue = answers.get(0).getIsTrue();
         }
@@ -104,17 +116,38 @@ public class PlayNormal extends ActionBarActivity {
             isTrue = answers.get(3).getIsTrue();
 
         }
+
         nextQuestion(isTrue);
 
     }
 
     /*
-        Loads the next question if the contion is true
+        Loads the next question if the contion is true and increments the number of answered questions and the score.
      */
     public void nextQuestion(boolean condition) {
-        if (condition) {
-            loadQuestion();
+        if (count <= NUMBER_QUESTIONS) {
+            if (condition) {
+                loadQuestion();
+                count++;
+                score += INCREMENT_SCORE;
+
+            } else {
+                score -= DECREMENT_SCORE;
+                if (score <= 0){
+                    score = 0;
+                }
+            }
+            gameOver.setText("Score: " +Integer.toString(score));
+
+        } else {
+            textViewQuestion.setVisibility(View.GONE);
+            for (int i = 0; i < buttons.size(); i++){
+                buttons.get(i).setVisibility(View.GONE);
+            }
+            gameOver.setText("Score: " +Integer.toString(score));
         }
+
+
     }
 
     @Override

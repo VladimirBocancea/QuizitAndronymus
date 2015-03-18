@@ -19,28 +19,43 @@
             android:background="@drawable/qlogo"
             android:layout_gravity="center" />
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editTextQuestion"
+
+            android:text="scores"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
             android:gravity="center"
-            android:hint="this is a question!?"
-            android:textColorHint="#ffffff"
+            android:layout_marginTop="30dp"
+
+            android:id="@+id/gameOver" />
+
+        <TextView
+            android:id="@+id/textViewQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="this is a question"
             android:textColor="#ffffff"
 
+            android:gravity="center"
             style="@style/editText_style"
+            android:layout_marginTop="30dp"
 
-            android:layout_marginTop="75dp" />
+            />
 
         <Button
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Answer 1"
             android:id="@+id/buttonAnswer1"
             android:gravity="center"
-            android:background="#34A03D"
-            android:layout_marginTop="75dp"
-            android:textColor="#ffffff" />
+            android:layout_marginTop="50dp"
+            android:textColor="#ffffff"
+            android:onClick="onClickAnyAnswer"
+            style="@style/style_button_answers"
+            />
 
         <Button
             android:layout_width="match_parent"
@@ -48,9 +63,12 @@
             android:text="Answer 2"
             android:id="@+id/buttonAnswer2"
             android:gravity="center"
-            android:background="#34A03D"
-            android:layout_marginTop="20dp"
-            android:textColor="#ffffff" />
+            android:layout_marginTop="15dp"
+            android:textColor="#ffffff"
+            style="@style/style_button_answers"
+            android:onClick="onClickAnyAnswer"
+
+            />
 
         <Button
             android:layout_width="match_parent"
@@ -58,9 +76,12 @@
             android:text="Answer 3"
             android:id="@+id/buttonAnswer3"
             android:gravity="center"
-            android:background="#34A03D"
-            android:layout_marginTop="20dp"
-            android:textColor="#ffffff" />
+            android:layout_marginTop="15dp"
+            android:textColor="#ffffff"
+            style="@style/style_button_answers"
+            android:onClick="onClickAnyAnswer"
+
+            />
 
         <Button
             android:layout_width="match_parent"
@@ -68,9 +89,13 @@
             android:text="Answer 4"
             android:id="@+id/buttonAnswer4"
             android:gravity="center"
-            android:background="#34A03D"
-            android:layout_marginTop="20dp"
-            android:textColor="#ffffff" />
+            android:layout_marginTop="15dp"
+            android:textColor="#ffffff"
+            style="@style/style_button_answers"
+            android:onClick="onClickAnyAnswer"
+
+            />
 
     </LinearLayout>
+
 </RelativeLayout>

@@ -27,7 +27,7 @@ public class LoadInfo {
             dbm.createCategory(new Category("Literatura"));
 
             dbm.createQuestion(new Question("¿En que deporte se utiliza tiza?", 1, "Fácil"));
-            dbm.createAnswer(new Answer("Futboll", 1, false));
+            dbm.createAnswer(new Answer("Fútbol", 1, false));
             dbm.createAnswer(new Answer("Golf", 1, false));
             dbm.createAnswer(new Answer("Baloncesto", 1, false));
             dbm.createAnswer(new Answer("Billar", 1, true));

@@ -26,10 +26,6 @@ dependencies {
     compile fileTree(include: 'Parse-*.jar', dir: 'libs')
     compile files('libs/bolts-android-1.1.4.jar')
     compile files('libs/bolts-android-1.1.4-javadoc.jar')
-    compile files('libs/ParseCrashReporting-1.8.1.jar')
-    compile files('C:/Users/VLad/AndroidStudioProjects/QuizitAndronimus/ParseLibs/bolts-android-1.1.4.jar')
-    compile files('C:/Users/VLad/AndroidStudioProjects/QuizitAndronimus/ParseLibs/Parse-1.8.3.jar')
-    compile files('C:/Users/VLad/AndroidStudioProjects/QuizitAndronimus/ParseLibs/ParseCrashReporting-1.8.3.jar')
     compile files('libs/Parse-1.8.3.jar')
     compile files('libs/ParseCrashReporting-1.8.3.jar')
 }

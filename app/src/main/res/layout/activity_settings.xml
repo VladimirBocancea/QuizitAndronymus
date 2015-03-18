@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.alex.qizit.OptionsMenu"
+    android:id="@+id/prueba"
+    android:background="@drawable/qblue1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sonido"
+        android:id="@+id/soundOpt"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vibracion"
+        android:id="@+id/vibrationOpt"
+        android:textSize="30sp"
+        android:layout_below="@+id/soundOpt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1"
+        android:layout_alignBottom="@+id/soundOpt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="49dp"
+        android:layout_marginEnd="49dp"
+        tools:ignore="NewApi"
+        android:checked="false" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch2"
+        tools:ignore="NewApi"
+        android:checked="false"
+        android:layout_below="@+id/switch1"
+        android:layout_alignLeft="@+id/switch1"
+        android:layout_alignStart="@+id/switch1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restablecer puntuacion"
+        android:id="@+id/restartScores"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminara todas las puntuacioness guardadas"
+        android:id="@+id/restartScoresInf"
+        android:textSize="17sp"
+        android:layout_below="@+id/restartScores"
+        android:layout_alignLeft="@+id/restartScores"
+        android:layout_alignStart="@+id/restartScores"
+        android:textColor="#ffffff" />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:id="@+id/buttonDelete"
+        android:textColor="#ffffff"
+        android:focusable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/restartScoresInf"
+        android:layout_alignStart="@+id/restartScoresInf"
+        android:layout_alignRight="@+id/restartScores"
+        android:layout_alignEnd="@+id/restartScores"
+        android:background="#34A03D" />
+
+</RelativeLayout>

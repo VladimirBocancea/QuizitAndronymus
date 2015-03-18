@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <!-- Background color of the app -->
+    <style name="appBackground_style">
+        <item name="android:background">#3F51B5 <!--@drawable/fondo--></item>
+    </style>
+
+
+    <!-- Edit Text theme -->
+    <style name="editText_style">
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@xml/relleno_text</item>
+    </style>
+
+
+
+    <style name="button_style">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@xml/redondear_buttons</item>
+    </style>
+
+
+
+  </resources>

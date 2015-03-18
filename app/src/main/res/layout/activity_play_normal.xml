@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idRelativeLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@drawable/qblue1"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView4"
+            android:background="@drawable/qlogo"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextQuestion"
+            android:gravity="center"
+            android:hint="this is a question!?"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+
+            style="@style/editText_style"
+
+            android:layout_marginTop="75dp" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Answer 1"
+            android:id="@+id/buttonAnswer1"
+            android:gravity="center"
+            android:background="#34A03D"
+            android:layout_marginTop="75dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer 2"
+            android:id="@+id/buttonAnswer2"
+            android:gravity="center"
+            android:background="#34A03D"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer 3"
+            android:id="@+id/buttonAnswer3"
+            android:gravity="center"
+            android:background="#34A03D"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer 4"
+            android:id="@+id/buttonAnswer4"
+            android:gravity="center"
+            android:background="#34A03D"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+</RelativeLayout>

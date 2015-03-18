@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.andronymus.quizit"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.google.android.gms:play-services:6.5.87'
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile fileTree(include: 'Parse-*.jar', dir: 'libs')
+    compile files('libs/bolts-android-1.1.4.jar')
+    compile files('libs/bolts-android-1.1.4-javadoc.jar')
+    compile files('libs/ParseCrashReporting-1.8.1.jar')
+    compile files('C:/Users/VLad/AndroidStudioProjects/QuizitAndronimus/ParseLibs/bolts-android-1.1.4.jar')
+    compile files('C:/Users/VLad/AndroidStudioProjects/QuizitAndronimus/ParseLibs/Parse-1.8.3.jar')
+    compile files('C:/Users/VLad/AndroidStudioProjects/QuizitAndronimus/ParseLibs/ParseCrashReporting-1.8.3.jar')
+    compile files('libs/Parse-1.8.3.jar')
+    compile files('libs/ParseCrashReporting-1.8.3.jar')
+}

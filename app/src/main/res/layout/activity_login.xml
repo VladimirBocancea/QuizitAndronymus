@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idLoginRelative"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@drawable/qblue1"
+    >
+
+    <LinearLayout
+        android:id="@+id/idLoginLinear"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@drawable/qlogo" />
+
+        <EditText
+            android:id="@+id/userNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="username"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+
+            android:layout_marginTop="50dp"
+            style="@style/editText_style"
+            />
+
+        <EditText
+            android:id="@+id/passWordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+
+            android:layout_marginTop="10dp"
+            style="@style/editText_style"
+            />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Login"
+            android:textColor="#ffffff"
+            android:background="#34A03D"
+
+            android:onClick="LoginIntoParse"
+            android:layout_marginTop="25dp"
+            style="@style/button_style"
+
+            />
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Sign Up"
+            android:textColor="#ffffff"
+            android:background="#34A03D"
+
+            android:onClick="ShowSignUpActivity"
+            android:layout_marginTop="10dp"
+            style="@style/button_style"
+
+
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

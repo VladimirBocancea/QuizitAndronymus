@@ -42,8 +42,8 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 // Inicio el servicio de notificaciones accediendo al servicio
         nm = (NotificationManager) getSystemService(ns);
-        sonidos = new Sonidos();
-        String fontPath2 = "fonts/LeckerliOne-Regular.ttf";
+sonidos = new Sonidos();
+        String fontPath2 ="fonts/LeckerliOne-Regular.ttf";
 
         /*
          * Creation of the Database
@@ -52,15 +52,16 @@ public class MainActivity extends ActionBarActivity {
         loadInfo = new LoadInfo(dbm);
 
 
+
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {
             // do stuff with the user
-          //  Toast toast = Toast.makeText(getApplicationContext(), "yes logged", Toast.LENGTH_SHORT);
-          //  toast.show();
+            Toast toast = Toast.makeText(getApplicationContext(), "yes logged", Toast.LENGTH_SHORT);
+            toast.show();
         } else {
             // show the signup or login screen
-          //  Toast toast = Toast.makeText(getApplicationContext(), "no logged", Toast.LENGTH_SHORT);
-          //  toast.show();
+            Toast toast = Toast.makeText(getApplicationContext(), "no logged", Toast.LENGTH_SHORT);
+            toast.show();
             Intent login = new Intent().setClass(MainActivity.this, LoginActivity.class);
             login.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             login.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -71,7 +72,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    public void onClickShare() {
+    public void onClickShare(){
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         String shareBody = "Check this new AndronymusQUIZIT!!";
@@ -79,6 +80,8 @@ public class MainActivity extends ActionBarActivity {
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
     }
+
+
 
 
     @Override
@@ -97,14 +100,14 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Settings op = new Settings(this, getPreferences(id));
+            Settings op = new Settings(this,getPreferences(id));
             Intent settings = new Intent().setClass(MainActivity.this, Settings.class);
             startActivity(settings);
             return true;
         }
         if (id == R.id.logout) {
-            notificacion(icono_r, "Quizit", "Quizit", "Te has deslogueado");
-            nm.notify(1, notif);
+            notificacion(icono_r, "Quizit","Quizit", "Te has deslogueado");
+            nm.notify(1,notif);
             ParseUser.logOut();
             finish();
 
@@ -116,6 +119,7 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
 
     public void notificacion(int icon, CharSequence textoEstado, CharSequence titulo, CharSequence texto) {
@@ -136,34 +140,35 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+
     public void OnClickPlayNormal(View view) {
         sonidos.sonidoClick(this);
         Intent playNormal = new Intent().setClass(MainActivity.this, PlayNormal.class);
         startActivity(playNormal);
     }
 
-    public void onClickAboutUs(View view) {
+    public void onClickAboutUs(View view){
         sonidos.sonidoClick(this);
         Intent aboutUs = new Intent().setClass(MainActivity.this, AboutUs.class);
         startActivity(aboutUs);
 
     }
 
-    public void onClickSetting(View view) {
+    public void onClickSetting(View view){
         sonidos.sonidoClick(this);
         Intent settings = new Intent().setClass(MainActivity.this, Settings.class);
         startActivity(settings);
 
     }
 
-    public void onClickScores(View view) {
+    public void onClickScores(View view){
         sonidos.sonidoClick(this);
         Intent scores = new Intent().setClass(MainActivity.this, Scores.class);
         startActivity(scores);
 
     }
 
-    public void onClickHowToPlay(View view) {
+    public void onClickHowToPlay(View view){
         sonidos.sonidoClick(this);
         Intent howToPlay = new Intent().setClass(MainActivity.this, HowToPlay.class);
         startActivity(howToPlay);
